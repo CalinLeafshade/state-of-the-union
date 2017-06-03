@@ -6,17 +6,11 @@ import Twitter from "react-icons/lib/fa/twitter";
 import Medium from "react-icons/lib/fa/medium";
 import Email from "react-icons/lib/md/email";
 
-import brands from "brand-colors";
-
-const brandColors = ["google", "medium", "twitter"].reduce(
-  (o, k) => (o[k] = brands.find(k)[0].color) && o,
-  {}
-);
+import { twitter, medium, google } from "brand-colors-es6";
 
 const HeaderSection = styled.header`
   padding: 60px 0;
   padding-bottom: 20px;
-  //text-align: center;
 `;
 
 const Heading = styled.h1`
@@ -54,11 +48,10 @@ const SocialLinkContainer = styled.a`
   }
 `;
 
-const SocialLink = ({ icon, href, color }) => (
+const SocialLink = ({ icon, href, color }) =>
   <SocialLinkContainer href={href} color={color}>
     {icon()}
-  </SocialLinkContainer>
-);
+  </SocialLinkContainer>;
 
 class App extends Component {
   render() {
@@ -75,17 +68,17 @@ class App extends Component {
           <SocialLink
             href="https://www.twitter.com/@calinleafshade"
             icon={Twitter}
-            color={brandColors.twitter}
+            color={twitter}
           />
           <SocialLink
             href="https://www.medium.com/@calinleafshade"
             icon={Medium}
-            color={brandColors.medium}
+            color={medium}
           />
           <SocialLink
             href="mailto:poulton.steven@googlemail.com"
             icon={Email}
-            color={brandColors.google}
+            color={google}
           />
         </div>
         <SectionHeading>Age</SectionHeading>
@@ -101,15 +94,18 @@ class App extends Component {
         </p>
         <SectionHeading>Location</SectionHeading>
         <p>
-          Steve currently lives in Manchester, England. He does not like football and so often feels out of place.
+          Steve currently lives in Manchester, England. He does not like
+          football and so often feels out of place.
         </p>
         <SectionHeading>How is Steve currently improving?</SectionHeading>
         <ul>
           <li>
-            Steve is currently transferring his life to a task management system. He doesn't know which one yet.
+            Steve is currently transferring his life to a task management
+            system. He doesn't know which one yet.
           </li>
           <li>
-            Steve is improving his guitar playing stamina to levels similar to when he was 18 years old by practicing 30 minutes a day
+            Steve is improving his guitar playing stamina to levels similar to
+            when he was 18 years old by practicing 30 minutes a day
           </li>
         </ul>
         <SectionHeading>Web things Steve has made</SectionHeading>
@@ -119,12 +115,15 @@ class App extends Component {
               <strong>Agribusiness Intelligence Map</strong>
             </a>
             {" "}
-            - A canvas-driven AngularJS app to visualize data related to policial geography
+            - A canvas-driven AngularJS app to visualize data related to
+            policial geography
           </li>
           <li>
             <a href="https://www.taploma.com/">
               <strong>Taploma</strong>
-            </a> - A modern eLearning platform with a focus on ease-of-use
+            </a>
+            {" "}
+            - A modern eLearning platform with a focus on ease-of-use
           </li>
         </ul>
 
@@ -149,12 +148,14 @@ class App extends Component {
               <strong>Your Creed</strong>
             </a>
             {" "}
-            - A document template which allows a user to document their own personal philosophy and distribute via github
+            - A document template which allows a user to document their own
+            personal philosophy and distribute via github
           </li>
         </ul>
         <SectionHeading>Current Tier 3 Projects</SectionHeading>
         <TierNote>
-          (A Tier 3 project is either on hold or not sufficiently important to spend significant time on)
+          (A Tier 3 project is either on hold or not sufficiently important to
+          spend significant time on)
         </TierNote>
         <ul>
           <li><strong>Aika</strong> - A timeboxing webapp</li>
