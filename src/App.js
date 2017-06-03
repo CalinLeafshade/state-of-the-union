@@ -97,6 +97,8 @@ class App extends Component {
           Steve currently lives in Manchester, England. He does not like
           football and so often feels out of place.
         </p>
+        <SectionHeading>Personal Manifesto</SectionHeading>
+        <p>Coming soon...</p>
         <SectionHeading>How is Steve currently improving?</SectionHeading>
         <ul>
           <li>
