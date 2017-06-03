@@ -162,7 +162,11 @@ class App extends Component {
         <ul>
           <li><strong>Aika</strong> - A timeboxing webapp</li>
           <li>
-            <strong>Unnamed</strong> - A modern, cross-platform podcasting app
+            <a href="https://github.com/CalinLeafshade/i-hear-voices">
+              <strong>I Hear Voices</strong>
+            </a>
+            {" "}- A modern, cross-platform podcasting
+            app
           </li>
           <li>
             <strong>Unnamed</strong> - A cross-platform OmniFocus killer
